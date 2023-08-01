@@ -66,7 +66,7 @@ const promptTemplate = async () => {
     return template;
 };
 
-const scaffoldProject = async () => {
+const scaffoldProject = () => {
     const projectPath = path.join(
         globalThis.__dirname,
         `../${cliResults.appName}`
@@ -99,10 +99,19 @@ const main = async () => {
     console.log(chalk.blue(figlet.textSync("Howdy!")));
 
     setup();
+
     cliResults.appName = await promptAppName();
     cliResults.flags.template = await promptTemplate();
 
-    await scaffoldProject();
+    scaffoldProject();
 };
 
-await main();
+main()
+    .then(() => {
+        console.log(chalk.green("Scaffolding complete. Happy coding!"));
+        process.exit(0);
+    })
+    .catch((err) => {
+        console.error(err);
+        process.exit(1);
+    });
