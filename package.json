@@ -2,6 +2,10 @@
   "name": "@cap/root",
   "version": "1.0.0",
   "description": "Bootstrap an app from templates.",
+  "repository": {
+    "url": "https://github.com/MoBaydoun/cap.git",
+    "type": "git"
+  },
   "type": "module",
   "packageManager": "pnpm@8.6.11",
   "engines": {
