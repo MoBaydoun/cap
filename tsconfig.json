@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+        // to make stuff work
+        "target": "esnext",
+        "lib": [
+            "esnext"
+        ],
+        "module": "nodenext",
+        "moduleResolution": "nodenext",
+        "resolveJsonModule": true,
+        "allowJs": true,
+        "checkJs": true,
+        "outDir": "dist",
+        "noEmit": true,
+        "declaration": true,
+        "declarationMap": true,
+        "sourceMap": true,
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "useDefineForClassFields": true,
+        // the actual type checking stuff
+        "strict": true,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitOverride": true,
+        "noImplicitReturns": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noUncheckedIndexedAccess": true
+    },
+}

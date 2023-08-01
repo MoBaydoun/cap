@@ -1,0 +1,33 @@
+{
+  "name": "cli",
+  "version": "1.0.0",
+  "description": "Create an app.",
+  "type": "module",
+  "exports": "./dist/index.js",
+  "bin": {
+    "cap": "./dist/index.js"
+  },
+  "engines": {
+    "node": ">=18.12"
+  },
+  "scripts": {
+    "typecheck": "tsc",
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rm -rf dist .turbo node_modules",
+    "start": "node dist/index.js"
+  },
+  "devDependencies": {
+    "@types/figlet": "^1.5.6",
+    "@types/inquirer": "^9.0.3",
+    "@types/node": "^20.4.5",
+    "tsup": "^7.1.0",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^11.0.0",
+    "figlet": "^1.6.0",
+    "inquirer": "^9.2.9"
+  }
+}
